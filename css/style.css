@@ -19,6 +19,10 @@ img {
   max-width: 100%;
 }
 
+.booking {
+  font-family: 'Nunito', sans-serif;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -617,7 +621,7 @@ template {
 .swiper-container {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 100%;
   border-radius: 8px;
   /* Градиент (тонирование изображения) */
 }
@@ -638,6 +642,7 @@ template {
 
 .slider {
   width: 728px;
+  height: 450px;
 }
 
 .slider-button {
@@ -795,12 +800,22 @@ template {
   width: 347px;
   height: 213px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 /* medium desktop */
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 590px;
+  }
+  .swiper-slide__image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   body {
     background-color: #f0deb9;
@@ -831,6 +846,30 @@ template {
     line-height: 15px;
   }
   .search__input {
+    width: 340px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .booking {
+    width: 340px;
+  }
+  .slider {
+    width: 100%;
+  }
+  .map {
     width: 340px;
   }
   body {
@@ -889,6 +928,9 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .hotel__slider {
+    margin-bottom: 20px;
+  }
   .hotel-info__text {
     width: 100%;
   }
@@ -905,6 +947,22 @@ template {
             order: -1;
     margin-left: 0;
   }
+  .slider {
+    height: 350px;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+  }
   body {
     background-color: #9eee79;
   }
@@ -919,6 +977,12 @@ template {
     padding-top: 28px;
     padding-bottom: 28px;
   }
+  .slider {
+    height: 250px;
+  }
+  .hotel__slider {
+    margin-bottom: 20px;
+  }
   body {
     background-color: #2e71c9;
   }
@@ -926,6 +990,9 @@ template {
 
 /* mobile */
 @media (max-width: 320px) {
+  .hotel-right__map {
+    margin-top: 20px;
+  }
   body {
     background-color: #6a9755;
   }
