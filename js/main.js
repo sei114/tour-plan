@@ -29,4 +29,6 @@ const reviewsSlider = new Swiper(".reviews-slider", {
 
   // Мои параметры
   speed: 800,
+  autoHeight: true,
+  spaceBetween: 80,
 });
