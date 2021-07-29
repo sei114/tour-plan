@@ -124,6 +124,16 @@
         margin: 0 10px
     &__payment
       grid-column: span 3
+  .modal
+    &__dialog
+      max-width: 420px
+      padding-left: 60px
+      padding-right: 60px
+    &__info
+      margin-right: 15px
+    &__button
+      margin-top: 15px
+      order: 99
   body
     background-color: #1ab9ac
 
@@ -286,6 +296,13 @@
       grid-column: 1 / 5
     &__payment
       grid-column: span 2
+  .modal
+    &__dialog
+      min-width: 100%
+      padding: 33px 88px
+      right: 0
+      left: 0
+      transform: translateY(-50%)
   body
     background-color: #9eee79
 
@@ -374,6 +391,10 @@
       grid-column: 1
       &-wrapper
         justify-content: flex-start
+  .modal
+    &__dialog
+      padding-left: 52px
+      padding-right: 52px
   body
     background-color: #2e71c9
 
@@ -386,5 +407,9 @@
   .booking
     &__price
       margin-right: 8px
+  .modal
+    &__dialog
+      padding-left: 38px
+      padding-right: 38px
   body
     background-color: #6a9755
