@@ -17,10 +17,12 @@
       rel="stylesheet"
     />
     <!-- /Google Fonts -->
+    <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- Swiperjs -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- /Swiperjs -->
+    <!-- Aos plugin -->
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -323,25 +325,25 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="200" data-aos-duration="2000">
             <img src="img/activity-1.jpg" alt="The curious corner of chamarel" class="card__image" />
             <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="300" data-aos-duration="2000">
             <img src="img/activity-2.jpg" alt="Gymkhana club golf course" class="card__image" />
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="400" data-aos-duration="2000">
             <img src="img/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image" />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="2000">
             <img src="img/activity-4.jpg" alt="The blue marine discovery quest" class="card__image" />
             <h3 class="card__title">The blue marine discovery quest</h3>
             <button class="card__button">Book Now</button>
@@ -356,7 +358,14 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" />
+          <img
+            src="img/vertical-logo.svg"
+            alt="Logo: Best Tour Plan"
+            class="logo footer__logo"
+            data-aos="zoom-out"
+            data-aos-delay="320"
+            data-aos-duration="2000"
+          />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -555,6 +564,8 @@
     <script src="js/jquery.validate.min.js"></script>
     <!-- jQuery Mask Plugin (https://igorescobar.github.io/jQuery-Mask-Plugin/) -->
     <script src="js/jquery.mask.min.js"></script>
+    <!-- Aos plugin (https://michalsnik.github.io/aos/) -->
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

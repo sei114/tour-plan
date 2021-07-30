@@ -33,6 +33,20 @@
           display: none
 .logo
   width: 177px
+  
+/* Анимация */
+.logo
+  &__image
+    animation-name: logo__image
+    animation-duration: 3s
+    animation-iteration-count: 1
+    animation-timing-function: ease-in-out
+@keyframes logo__image
+  0%
+    opacity: 0    
+  100%
+    opacity: 1
+    
 .search
   display: flex // не нужно наверное
   position: relative

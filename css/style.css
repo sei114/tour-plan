@@ -468,6 +468,36 @@ template {
   width: 177px;
 }
 
+/* Анимация */
+.logo__image {
+  -webkit-animation-name: logo__image;
+          animation-name: logo__image;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes logo__image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo__image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
