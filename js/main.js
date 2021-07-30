@@ -58,6 +58,7 @@ $(document).ready(function () {
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
 
+  /* Одно модальное окно */
   function openModal() {
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
@@ -82,4 +83,34 @@ $(document).ready(function () {
     modalDialog.removeClass("modal__dialog--visible");
   }
   /* /Модальные окна */
+
+  /* Обработка форм */
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "The name must be at least 2 letters long",
+        },
+        email: {
+          required: "Email is required",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        emailOnly: {
+          required: "Email is required",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone: {
+          required: "Phone number is required",
+          minlength: "Please enter at least 10 digits",
+        },
+      },
+    });
+  });
+
+  /* jQuery Mask Plugin */
+  $(".phone-rus").mask("+7(999)999-99-99", { translation: { 9: { pattern: /[0-9*]/ } } });
+  // $(".clear-if-not-match").mask("+7(999)999-99-99", { clearIfNotMatch: true });
+  // $(".selectonfocus").mask("+7(999)999-99-99", { selectOnFocus: true });
 });
