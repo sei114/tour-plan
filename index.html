@@ -16,9 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <!-- rel="preload" as="font" -->
     <!-- /Google Fonts -->
     <!-- Normalize -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <!-- Swiperjs -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <!-- Aos plugin -->
@@ -325,28 +326,48 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="200" data-aos-duration="2000">
+          <div
+            class="card activities__card activities__card-1"
+            data-aos="zoom-out-up"
+            data-aos-delay="200"
+            data-aos-duration="2000"
+          >
             <img src="img/activity-1.jpg" alt="The curious corner of chamarel" class="card__image" />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="300" data-aos-duration="2000">
+          <div
+            class="card activities__card activities__card-2"
+            data-aos="zoom-out-up"
+            data-aos-delay="300"
+            data-aos-duration="2000"
+          >
             <img src="img/activity-2.jpg" alt="Gymkhana club golf course" class="card__image" />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="400" data-aos-duration="2000">
+          <div
+            class="card activities__card activities__card-3"
+            data-aos="zoom-out-up"
+            data-aos-delay="400"
+            data-aos-duration="2000"
+          >
             <img src="img/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image" />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="2000">
+          <div
+            class="card activities__card activities__card-4"
+            data-aos="zoom-out-up"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+          >
             <img src="img/activity-4.jpg" alt="The blue marine discovery quest" class="card__image" />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -409,17 +430,19 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
-            <ul class="footer__ul">
-              <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-            </ul>
+            <div class="footer__legal-wrapper">
+              <h3 class="footer__title">LEGAL INFORMATION</h3>
+              <ul class="footer__ul">
+                <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+              </ul>
+            </div>
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3 footer__title--mt-1">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
             <ul class="footer__ul">
               <li class="footer__item footer__item--mb-2">
@@ -432,15 +455,27 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone-call-2.svg" alt="Icon: phone call" />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <ul class="footer__ul">
+                  <li><a href="tel:2691500" class="footer__link">Tel (business hours) : 269 1500</a></li>
+                  <li>
+                    <a href="tel:52566138" class="footer__link"
+                      >Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:52566138" class="footer__link"
+                      >Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="Icon: email" />
                 </div>
-                cherly.lawson@example.com
+                <ul class="footer__ul">
+                  <li><a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a></li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -471,9 +506,8 @@
                   data-mask-selectonfocus="true"
                 />
               </div>
-
-              <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
-              <button class="button footer__button" type="submit">Send</button>
+              <textarea class="textarea message footer__message" placeholder="Message" name="message"></textarea>
+              <button class="button button--160-50 footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
@@ -526,8 +560,8 @@
             data-mask-selectonfocus="true"
           />
           <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required />
-          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-          <button class="button modal__button" type="submit">Send</button>
+          <textarea class="textarea message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button button--160-50 modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>
       </div>
@@ -547,7 +581,7 @@
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required />
           <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" required />
           <input type="text" class="input modal__input" placeholder="Email*" name="email" required />
-          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+          <textarea class="textarea message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>

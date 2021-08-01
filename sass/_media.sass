@@ -51,7 +51,7 @@
     &-grid
       flex-direction: column
     &__slider
-      margin-bottom: 30px
+      margin: 0 0 30px 0
     &-slider
       width: 100%
     &-right
@@ -60,10 +60,9 @@
     width: 340px
   .map
     width: 340px
-  .newsletter
-    padding: 92px 0 93px 0
+    height: 210px
   .reviews
-    padding: 40px 0 22px 0
+    padding: 40px 0 60px 0
     &-slider
       &__item
         max-width: 580px
@@ -94,6 +93,7 @@
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
+      width: 104px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
@@ -114,8 +114,10 @@
       &-form
         grid-row: 4
         grid-column: span 5
+        width: 539px
     &__note
       grid-column: 1 / 4
+      margin-top: 28px
       &-wrapper
         justify-content: flex-start
     &__link
@@ -126,6 +128,7 @@
         margin: 0 10px
     &__payment
       grid-column: span 3
+      margin-top: 18px
   .modal
     &__dialog
       max-width: 420px
@@ -146,6 +149,9 @@
     width: 92%
   body
     padding-top: 78px
+  .logo
+    &__image
+      animation: none
   .navbar
     &--mobile
       &--fixed
@@ -213,7 +219,6 @@
   .stars
     flex-basis: auto
   .hotel
-    padding-top: 5px
     &-name
       flex-basis: 100%
     &-wrapper
@@ -221,6 +226,7 @@
     &__slider
       margin-bottom: 20px
     &-info
+      padding-top: 0
       &__text
         width: 100%
       &__name
@@ -232,15 +238,22 @@
         order: -1
         margin-left: 0
     &-right
-      flex-direction: column
-      min-height: 450px
+      display: block
+      // flex-direction: column
+      // min-height: 450px
+      &__map
+        margin-top: 20px
     &-slider
-      height: 350px
+      height: 314px
+    &-grid
+      padding-top: 18px
+      padding-bottom: 40px
   .booking
     width: 100%
   .map
     width: 100%
   .newsletter
+    padding: 76px 0 83px 0
     &-wrapper
       max-width: 576px
       width: 92%
@@ -256,7 +269,7 @@
         font-size: 30px
         line-height: 38px
   .reviews
-    padding: 40px 0 12px 0
+    padding: 40px 0 50px 0
     &-slider
       &__item
         padding: 0 30px 36px
@@ -290,6 +303,15 @@
     &__contact
       &-form
         grid-column: span 6
+        width: 100%
+      &-details
+        grid-column: 4 / 7
+    &__legal
+      grid-column: 1 / 4
+    &__categories
+      grid-column: 1 / 4
+    &__additional
+      grid-column: 4 / 7
     &__input
       &-group
         flex-basis: 100%
@@ -301,13 +323,14 @@
       grid-column: span 2
   .modal
     &__dialog
-      min-width: 100%
+      min-width: 92%
+      margin: auto
       padding: 33px 88px
       right: 0
       left: 0
       transform: translateY(-50%)
   body
-    background-color: #9eee79
+    background-color: #92cf76
 
 /* smartphone */
 @media (max-width: 576px)
@@ -323,7 +346,7 @@
     &__slider
       margin-bottom: 20px
     &-slider
-      height: 250px
+      height: 180px
   .newsletter
     padding: 76px 0 83px 0
   .subscribe
@@ -360,6 +383,9 @@
       grid-row: 3
       grid-column: 1
       margin-top: 20px
+      &-wrapper
+        width: 100%
+        margin: auto
     &__additional
       grid-row: 4
       grid-column: 1
@@ -372,7 +398,7 @@
       &-details
         grid-row: 6
         grid-column: 1
-        margin-top: 30px
+        margin-top: 20px
       &-form
         grid-row: 7
         grid-column: 1
@@ -392,6 +418,7 @@
     &__payment
       grid-row: 9
       grid-column: 1
+      margin: 0
       &-wrapper
         justify-content: flex-start
   .modal
@@ -403,6 +430,9 @@
 
 /* mobile */
 @media (max-width: 320px)
+  .container
+    max-width: 280px
+    // width: 92%
   .hotel
     &-right
       &__map

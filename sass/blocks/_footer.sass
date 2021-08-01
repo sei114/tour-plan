@@ -2,7 +2,7 @@
   background-color: $dark
   color: $light
   padding-top: 108px
-  padding-bottom: 46px
+  padding-bottom: 28px
   &-wrapper
     display: grid
     // grid-template-columns: repeat(4, minmax(250px, 1fr))
@@ -17,7 +17,8 @@
   &__categories
     grid-row: 1 / 4
   //   background-color: #5674ad
-  // &__additional
+  &__additional
+    margin-left: 6px
   //   background-color: #8ba8a4
   &__social
     &-links
@@ -25,20 +26,27 @@
       justify-content: space-between
       align-items: center
       min-width: 83px
+      margin-top: 4px
     &-network
       display: flex
       align-items: flex-start
       grid-row: 2 / 4
       grid-column: span 2
+      margin-left: 6px
   //     background-color: #da8361
-  // &__legal
-  //   background-color: #3a816c
+  &__legal
+    &-wrapper
+      margin-right: 0
+      margin-left: auto
+      width: 195px
+      //   background-color: #3a816c
   &__contact
     &-details
       grid-column: span 2
       // background-color: #995a5a
     &-form
       grid-column: span 2
+      margin-left: 6px
   &__form
     display: flex
     justify-content: space-between
@@ -55,9 +63,11 @@
     margin: 0 0 16px 0
     text-transform: uppercase
     &--inline
-      margin: 0 43px 0 0
+      margin: 4px 43px 0 0
     &--mb-3
       margin-bottom: 34px
+    &--mt-1
+      margin-top: 11px
   &__item
     display: flex
     align-items: flex-start
@@ -98,6 +108,7 @@
     color: #E0E0E0
   &__note
     grid-column: 2 / 4
+    margin-top: 85px
     font-size: 12px
     font-weight: 400
     line-height: 15px
@@ -108,7 +119,8 @@
       justify-content: center
       align-items: flex-start
   &__payment
+    margin-top: 75px
     &-wrapper
       display: flex
       justify-content: flex-end
-      align-items: flex-start
+      align-items: flex-start     

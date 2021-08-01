@@ -16,18 +16,21 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <!-- rel="preload" as="font" -->
     <!-- /Google Fonts -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Normalize -->
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <!-- Swiperjs -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- /Swiperjs -->
+    <!-- Aos plugin -->
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" />
           </a>
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -82,6 +85,7 @@
       </div>
       <!-- /.navbar-bottom -->
     </header>
+
     <nav class="breadcrumb">
       <div class="container">
         <ul class="breadcrumb-list">
@@ -99,14 +103,17 @@
     <!-- /.breadcrumb -->
     <section class="hotel">
       <div class="container">
-        <div class="hotel-info">
+        <div class="hotel-info hotel-info--thanks">
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
-              <h1 class="hotel-name hotel-info__name">Сообщение отправлено!</h1>
+              <h1 class="hotel-name hotel-info__name">The message has been sent!</h1>
             </div>
             <p class="hotel-description hotel-info__description">
-              В ближайшее время мы с вами свяжемся. Благодарим за обратную связь.
+              We will contact you soon. Thank you for your feedback.
             </p>
+            <button class="button button--160-50 navigation-button" type="submit">
+              <a class="navigation-link" href="index.html">Home</a>
+            </button>
           </div>
           <!-- /.hotel-info__text -->
         </div>
@@ -115,10 +122,18 @@
       <!-- /.container -->
     </section>
     <!-- /.hotel -->
+
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" />
+          <img
+            src="img/vertical-logo.svg"
+            alt="Logo: Best Tour Plan"
+            class="logo footer__logo"
+            data-aos="zoom-out"
+            data-aos-delay="320"
+            data-aos-duration="2000"
+          />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -162,17 +177,19 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
-            <ul class="footer__ul">
-              <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-            </ul>
+            <div class="footer__legal-wrapper">
+              <h3 class="footer__title">LEGAL INFORMATION</h3>
+              <ul class="footer__ul">
+                <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+              </ul>
+            </div>
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3 footer__title--mt-1">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
             <ul class="footer__ul">
               <li class="footer__item footer__item--mb-2">
@@ -185,26 +202,59 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone-call-2.svg" alt="Icon: phone call" />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <ul class="footer__ul">
+                  <li><a href="tel:2691500" class="footer__link">Tel (business hours) : 269 1500</a></li>
+                  <li>
+                    <a href="tel:52566138" class="footer__link"
+                      >Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:52566138" class="footer__link"
+                      >Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="Icon: email" />
                 </div>
-                cherly.lawson@example.com
+                <ul class="footer__ul">
+                  <li><a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a></li>
+                </ul>
               </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input type="text" class="input footer__input" required placeholder="Your Full Name*" name="name" />
-              <input type="text" class="input footer__input" required placeholder="Phone Number*" name="phone" />
-              <textarea class="footer__message" placeholder="Message" name="message"></textarea>
-              <button class="button footer__button" type="submit">Send</button>
+            <form action="send.php" method="POST" class="form footer__form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input phone-rus"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                  minlength="16"
+                  data-mask="+7(999)999-99-99"
+                  data-mask-clearifnotmatch="true"
+                  data-mask-selectonfocus="true"
+                />
+              </div>
+              <textarea class="textarea message footer__message" placeholder="Message" name="message"></textarea>
+              <button class="button button--160-50 footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
@@ -228,9 +278,75 @@
       </div>
       <!-- /.container -->
     </footer>
-    <!-- Слайдер Swiperjs -->
+    <div class="modal" id="booking-modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close" />
+        </a>
+        <h3 class="modal__title modal__title--mb-3">Booking</h3>
+        <form action="send.php" method="POST" class="form modal__form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input phone-rus"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+            minlength="16"
+            data-mask="+7(999)999-99-99"
+            data-mask-clearifnotmatch="true"
+            data-mask-selectonfocus="true"
+          />
+          <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required />
+          <textarea class="textarea message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button button--160-50 modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- <div class="modal" id="rating-modal">
+      <div class="modal__overlay"></div> -->
+    <!-- /.modal__overlay -->
+    <!-- <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close" />
+        </a>
+        <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
+        <form action="send.php" method="POST" class="modal__form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required />
+          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" required />
+          <input type="text" class="input modal__input" placeholder="Email*" name="email" required />
+          <textarea class="textarea message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div> -->
+    <!-- /.modal__dialog -->
+    <!-- </div> -->
+    <!-- /.modal -->
+
+    <!-- jQuery (https://jquery.com/) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Слайдер Swiperjs (https://swiperjs.com/) -->
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- /Слайдер Swiperjs -->
+    <!-- jQuery Validation plugin (https://jqueryvalidation.org/) -->
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- jQuery Mask Plugin (https://igorescobar.github.io/jQuery-Mask-Plugin/) -->
+    <script src="js/jquery.mask.min.js"></script>
+    <!-- Aos plugin (https://michalsnik.github.io/aos/) -->
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
