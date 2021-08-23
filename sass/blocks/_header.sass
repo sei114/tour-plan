@@ -28,27 +28,27 @@
       font-size: 14px
       line-height: 18px
     &__item
+      &:hover
+        color: $primary
       &--mobile
         &--visible
           display: none
-.logo
-  width: 177px
-  
-/* Анимация */
-.logo
-  &__image
-    animation-name: logo__image
+.header
+  &__logo
+    width: 177px
+    animation-name: header__logo
     animation-duration: 3s
     animation-iteration-count: 1
     animation-timing-function: ease-in-out
-@keyframes logo__image
+/* Анимация */
+@keyframes header__logo
   0%
     opacity: 0    
   100%
     opacity: 1
     
 .search
-  display: flex // не нужно наверное
+  display: flex // нужно ли
   position: relative
   overflow: hidden
   border-radius: 6px

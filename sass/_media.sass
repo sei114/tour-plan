@@ -30,15 +30,17 @@
   .container,
   .newsletter-wrapper
     max-width: 700px
-  .logo
-    width: 132px
+  .header
+    &__logo
+      width: 132px
   .navbar
     &-top
       padding-top: 30px
       padding-bottom: 30px
     &__search
-      margin-left: auto
+      margin-left: 47px
     &-menu
+      justify-content: space-around
       padding-top: 22px
       padding-bottom: 22px
       &__link
@@ -50,6 +52,7 @@
   .hotel
     &-grid
       flex-direction: column
+      padding-bottom: 60px
     &__slider
       margin: 0 0 30px 0
     &-slider
@@ -61,6 +64,8 @@
   .map
     width: 340px
     height: 210px
+  .newsletter
+    padding: 92px 0 92px 0
   .reviews
     padding: 40px 0 60px 0
     &-slider
@@ -91,33 +96,46 @@
       &-group
         flex-basis: 48%
     &__logo
-      grid-row: 1 / 2
-      grid-column: span 2
-      width: 104px
+      width: 96px
+      &-wrapper
+        grid-row: 1 / 2
+        grid-column: 1 / 3
+    &__title
+      &--inline
+        margin-top: 12px
     &__categories
       grid-row: 2 / 3
-      grid-column: span 2
+      grid-column: 1 / 3
+      margin-top: 12px
     &__additional
-      grid-column: span 2
+      grid-row: 2 / 3
+      grid-column: 2 / 5
+      margin: 12px 0 0 75px
     &__social
       &-network
         grid-row: 1 / 2
-        grid-column: span 4
+        grid-column: 2 / 7
         align-self: center
+        margin-left: 62px
+      &-links
+        margin-top: 12px
     &__legal
-      grid-column: span 2
+      grid-row: 2 / 3
+      grid-column: 4 / 7
+      margin: 12px 6px 0 0
     &__contact
       &-details
         grid-row: 3
         grid-column: span 5
-        margin-top: 20px
+        margin-top: 25px
       &-form
         grid-row: 4
         grid-column: span 5
         width: 539px
+        margin: 22px 0 0 0
     &__note
       grid-column: 1 / 4
-      margin-top: 28px
+      margin-top: 26px
       &-wrapper
         justify-content: flex-start
     &__link
@@ -172,7 +190,7 @@
     &-bottom
       display: none
       position: fixed
-      top: 78px
+      top: 74px
       right: 0
       bottom: 0
       left: 0
@@ -187,8 +205,6 @@
           &--visible
             display: block
             margin-bottom: 27px
-            &--mb-3
-              margin-bottom: 39px
   .menu
     &-button
       display: flex
@@ -218,6 +234,9 @@
           width: 243px
   .stars
     flex-basis: auto
+    &__item
+      margin-right: 0
+      margin-left: 2px
   .hotel
     &-name
       flex-basis: 100%
@@ -226,7 +245,7 @@
     &__slider
       margin-bottom: 20px
     &-info
-      padding-top: 0
+      padding-top: 5px
       &__text
         width: 100%
       &__name
@@ -237,6 +256,7 @@
       &__offer
         order: -1
         margin-left: 0
+        margin-top: 0
     &-right
       display: block
       // flex-direction: column
@@ -307,11 +327,17 @@
       &-details
         grid-column: 4 / 7
     &__legal
+      grid-row: auto
       grid-column: 1 / 4
+      margin: 23px 0 0 0
+      &-wrapper
+        margin-left: 0
     &__categories
       grid-column: 1 / 4
+      margin-top: 0
     &__additional
       grid-column: 4 / 7
+      margin: 0
     &__input
       &-group
         flex-basis: 100%
@@ -321,6 +347,9 @@
       grid-column: 1 / 5
     &__payment
       grid-column: span 2
+    &__icon
+      &-wrapper
+        margin-left: 0
   .modal
     &__dialog
       min-width: 92%
@@ -334,14 +363,15 @@
 
 /* smartphone */
 @media (max-width: 576px)
-  .logo
-    width: 99px
+  .header
+    &__logo
+      width: 99px
   .navbar
     &-top
-      padding-top: 28px
-      padding-bottom: 28px
+      padding-top: 29px
+      padding-bottom: 29px
     &-bottom
-      top: 74px
+      top: 69px
   .hotel
     &__slider
       margin-bottom: 20px
@@ -368,8 +398,9 @@
       &--inline
         margin: 0
     &__logo
-      grid-row: 1
-      grid-column: 1
+      &-wrapper
+        grid-row: 1
+        grid-column: 1
     &__social
       &-network
         grid-row: 2
@@ -377,6 +408,7 @@
         flex-direction: column
         justify-content: flex-start
         margin-top: 20px
+        margin-left: 0
       &-links
         margin-top: 20px
     &__legal
@@ -390,6 +422,7 @@
       grid-row: 4
       grid-column: 1
       margin-top: 20px
+      margin-left: 0
     &__categories
       grid-row: 5
       grid-column: 1
@@ -398,11 +431,12 @@
       &-details
         grid-row: 6
         grid-column: 1
-        margin-top: 20px
+        margin-top: 30px
       &-form
         grid-row: 7
         grid-column: 1
         margin-top: 50px
+        margin-left: 0
     &__message
       margin-bottom: 15px
     &__info
