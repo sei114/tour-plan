@@ -158,12 +158,6 @@
     &__payment
       grid-column: span 3
       margin-top: 18px
-    &__hover
-      &:hover
-        color: $form-text-color
-      &--light
-        &:hover
-          color: $light
   .modal
     &__dialog
       max-width: 420px
@@ -177,9 +171,16 @@
   .logo
     &__image
       animation: none
-    &__hover
+    &--hover
       &:hover
         opacity: 1
+  .hover
+    &-light
+      &:hover
+        color: $light
+    &-primary
+      &:hover
+        color: $form-text-color
   .button
     &:hover
       background-color: $primary
