@@ -63,7 +63,7 @@
               </a>
               <!-- /.user -->
             </li>
-            <li class="navbar-menu__item navbar-menu__item--mobile--visible navbar-menu__item--mobile--visible--mb-3">
+            <li class="navbar-menu__item navbar-menu__item--mobile--visible mb-39">
               <form action="#" class="search navbar__search navbar__search--mobile--visible">
                 <input type="text" class="search__input search__input--mobile--visible" placeholder="Search Location" />
                 <button class="search__button">
@@ -190,16 +190,16 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title mb-24">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
             <ul class="footer__ul">
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item mb-16">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/map-marker.svg" alt="Icon: map" />
                 </div>
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
               </li>
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item mb-16">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone-call-2.svg" alt="Icon: phone call" />
                 </div>
@@ -217,11 +217,11 @@
                   </li>
                 </ul>
               </li>
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="Icon: email" />
                 </div>
-                <ul class="footer__ul">
+                <ul class="footer__ul mt-4">
                   <li><a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a></li>
                 </ul>
               </li>
@@ -229,30 +229,32 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+            <h3 class="footer__title mb-34">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
-              <div class="footer__input-group">
-                <input
-                  type="text"
-                  class="input footer__input"
-                  placeholder="Your Full Name*"
-                  name="name"
-                  required
-                  minlength="2"
-                />
-              </div>
-              <div class="footer__input-group">
-                <input
-                  type="tel"
-                  class="input footer__input phone-rus"
-                  placeholder="Phone Number*"
-                  name="phone"
-                  required
-                  minlength="16"
-                  data-mask="+7(999)999-99-99"
-                  data-mask-clearifnotmatch="true"
-                  data-mask-selectonfocus="true"
-                />
+              <div class="footer__input-wrapper">
+                <div class="footer__input-group">
+                  <input
+                    type="text"
+                    class="input footer__input"
+                    placeholder="Your Full Name*"
+                    name="name"
+                    required
+                    minlength="2"
+                  />
+                </div>
+                <div class="footer__input-group">
+                  <input
+                    type="tel"
+                    class="input footer__input phone-rus"
+                    placeholder="Phone Number*"
+                    name="phone"
+                    required
+                    minlength="16"
+                    data-mask="+7(999)999-99-99"
+                    data-mask-clearifnotmatch="true"
+                    data-mask-selectonfocus="true"
+                  />
+                </div>
               </div>
               <textarea class="textarea message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button button--160-50 footer__button" type="submit">Send</button>
@@ -286,7 +288,7 @@
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="Icon: close" />
         </a>
-        <h3 class="modal__title modal__title--mb-3">Booking</h3>
+        <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="form modal__form">
           <input
             type="text"
@@ -324,7 +326,7 @@
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="Icon: close" />
         </a>
-        <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
+        <h3 class="modal__title>Send us a feedback</h3>
         <form action="send.php" method="POST" class="modal__form">
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required />
           <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" required />

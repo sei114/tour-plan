@@ -8,6 +8,12 @@
     padding-bottom: 40px
     &__menu-button
       display: none
+    &__logo
+      width: 177px
+      animation-name: navbar-top__logo
+      animation-duration: 3s
+      animation-iteration-count: 1
+      animation-timing-function: ease-in-out
   &__search
     margin-right: auto
     margin-left: 108px
@@ -33,15 +39,9 @@
       &--mobile
         &--visible
           display: none
-.header
-  &__logo
-    width: 177px
-    animation-name: header__logo
-    animation-duration: 3s
-    animation-iteration-count: 1
-    animation-timing-function: ease-in-out
+    
 /* Анимация */
-@keyframes header__logo
+@keyframes navbar-top__logo
   0%
     opacity: 0    
   100%
@@ -71,6 +71,9 @@
     height: 100%
     border: none
     background-color: $primary
+    cursor: pointer
+    &:hover
+      background-color: $hover
 .user
   display: flex
   align-items: center
@@ -80,8 +83,17 @@
     height: 40px
     border-radius: 50%
     object-fit: cover
+    &:hover
+      opacity: 0.8
   &__name
     margin-left: 18px
     font-size: 14px
     line-height: 18px
     color: $text-color
+    &:hover
+      color: $primary
+.breadcrumb
+  &-list
+    &__link
+      &:hover
+        color: $primary

@@ -22,21 +22,20 @@
     &__message
       flex-basis: 100%
       width: 100%
-  body
-    background-color: #f0deb9
+  // body
+  //   background-color: #f0deb9
 
 /* small desktop */
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
     max-width: 700px
-  .header
-    &__logo
-      width: 132px
   .navbar
     &-top
       padding-top: 30px
       padding-bottom: 30px
+      &__logo
+        width: 132px
     &__search
       margin-left: 47px
     &-menu
@@ -46,9 +45,15 @@
       &__link
         font-size: 12px
         line-height: 15px
+      &__item
+        &:hover
+          color: $light
   .search
     &__input
       width: 340px
+    &__button
+      &:hover
+        background-color: $primary
   .hotel
     &-grid
       flex-direction: column
@@ -85,6 +90,9 @@
   .card
     width: 340px
     height: 255px
+    &__button
+      &:hover
+        background-color: $primary
   .footer
     padding-top: 73px
     padding-bottom: 33px
@@ -119,6 +127,9 @@
         margin-left: 62px
       &-links
         margin-top: 12px
+      &-img
+        &:hover
+          opacity: 1
     &__legal
       grid-row: 2 / 3
       grid-column: 4 / 7
@@ -147,6 +158,12 @@
     &__payment
       grid-column: span 3
       margin-top: 18px
+    &__hover
+      &:hover
+        color: $form-text-color
+      &--light
+        &:hover
+          color: $light
   .modal
     &__dialog
       max-width: 420px
@@ -157,9 +174,30 @@
     &__button
       margin-top: 15px
       order: 99
-  body
-    background-color: #1ab9ac
-
+  .logo
+    &__image
+      animation: none
+    &__hover
+      &:hover
+        opacity: 1
+  .button
+    &:hover
+      background-color: $primary
+  .user
+    &__avatar
+      &:hover
+        opacity: 1
+    &__name
+      &:hover
+        color: $text-color
+  .breadcrumb
+    &-list
+      &__link
+        &:hover
+          color: $text-color
+  // body
+  //   background-color: #1ab9ac
+    
 /* tablet */
 @media (max-width: 768px)
   .container
@@ -167,9 +205,6 @@
     width: 92%
   body
     padding-top: 78px
-  .logo
-    &__image
-      animation: none
   .navbar
     &--mobile
       &--fixed
@@ -187,6 +222,8 @@
     &__user
       flex-direction: column
       justify-content: center
+    &__search
+      margin: 0
     &-bottom
       display: none
       position: fixed
@@ -358,18 +395,17 @@
       right: 0
       left: 0
       transform: translateY(-50%)
-  body
-    background-color: #92cf76
+  // body
+  //   background-color: #92cf76
 
 /* smartphone */
 @media (max-width: 576px)
-  .header
-    &__logo
-      width: 99px
   .navbar
     &-top
       padding-top: 29px
       padding-bottom: 29px
+      &__logo
+        width: 99px
     &-bottom
       top: 69px
   .hotel
@@ -459,8 +495,8 @@
     &__dialog
       padding-left: 52px
       padding-right: 52px
-  body
-    background-color: #2e71c9
+  // body
+  //   background-color: #2e71c9
 
 /* mobile */
 @media (max-width: 320px)
@@ -478,5 +514,5 @@
     &__dialog
       padding-left: 38px
       padding-right: 38px
-  body
-    background-color: #6a9755
+  // body
+  //   background-color: #6a9755

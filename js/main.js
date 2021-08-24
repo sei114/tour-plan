@@ -121,7 +121,7 @@ $(document).ready(function () {
 });
 
 /* Убираем анимацию на мобильных устройствах */
-if (window.matchMedia("(max-width: 768px)").matches) {
+if (window.matchMedia("(max-width: 992px)").matches) {
   animOff();
 }
 
