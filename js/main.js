@@ -118,17 +118,35 @@ $(document).ready(function () {
 
   /* Aos plugin */
   AOS.init();
+
+  /* Убираем анимацию на мобильных устройствах */
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    animOff();
+  }
+
+  function animOff() {
+    document.querySelector(".footer__logo").removeAttribute("data-aos");
+    document.querySelector(".activities__card-1").removeAttribute("data-aos");
+    document.querySelector(".activities__card-2").removeAttribute("data-aos");
+    document.querySelector(".activities__card-3").removeAttribute("data-aos");
+    document.querySelector(".activities__card-4").removeAttribute("data-aos");
+  }
+
+  /* Кликабельная по всей площади кнопка button */
+  //   document.querySelector(".navigation-button").addEventListener("click", function () {
+  //     // console.log("Клик по ёжику");
+  //     document.location.href = "index.html";
+  //   });
+  // });
+
+  // if (
+  //   document.querySelector(
+  //     ".footer__logo",
+  //     ".activities__card-1",
+  //     ".activities__card-2",
+  //     ".activities__card-3",
+  //     ".activities__card-4"
+  //   )
+  // ) {
+  // }
 });
-
-/* Убираем анимацию на мобильных устройствах */
-if (window.matchMedia("(max-width: 992px)").matches) {
-  animOff();
-}
-
-function animOff() {
-  document.querySelector(".footer__logo").removeAttribute("data-aos");
-  document.querySelector(".activities__card-1").removeAttribute("data-aos");
-  document.querySelector(".activities__card-2").removeAttribute("data-aos");
-  document.querySelector(".activities__card-3").removeAttribute("data-aos");
-  document.querySelector(".activities__card-4").removeAttribute("data-aos");
-}

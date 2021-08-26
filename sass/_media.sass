@@ -198,7 +198,7 @@
           color: $text-color
   // body
   //   background-color: #1ab9ac
-    
+
 /* tablet */
 @media (max-width: 768px)
   .container
@@ -233,6 +233,8 @@
       bottom: 0
       left: 0
       padding-top: 31px
+      max-height: 100% /* прокрутка */
+      overflow: auto /* прокрутка */
       &--visible
         display: block
     &-menu
@@ -265,6 +267,8 @@
         margin-left: 0
         margin-top: 10px
         color: $light
+        &:hover
+          color: $light
   .search
     &__input
       &--mobile
@@ -401,6 +405,9 @@
 
 /* smartphone */
 @media (max-width: 576px)
+  .container
+    max-width: 432px
+    width: 92%
   .navbar
     &-top
       padding-top: 29px
@@ -423,6 +430,8 @@
     &-slider
       &__text
         text-align: left
+  .map
+    height: 173px
   .card
     width: 100%
   .footer
@@ -444,7 +453,7 @@
         grid-column: 1
         flex-direction: column
         justify-content: flex-start
-        margin-top: 20px
+        margin-top: 32px
         margin-left: 0
       &-links
         margin-top: 20px
@@ -494,6 +503,8 @@
         justify-content: flex-start
   .modal
     &__dialog
+      max-width: 92%
+      max-height: 92%
       padding-left: 52px
       padding-right: 52px
   // body
@@ -503,7 +514,7 @@
 @media (max-width: 320px)
   .container
     max-width: 280px
-    // width: 92%
+    width: 92%
   .hotel
     &-right
       &__map
@@ -515,5 +526,8 @@
     &__dialog
       padding-left: 38px
       padding-right: 38px
+  .footer
+    &__note
+      font-size: 11px
   // body
   //   background-color: #6a9755
